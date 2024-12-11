@@ -163,7 +163,7 @@ main.exe
 
 - **Linguagem de Programação**: C++17
 - **Bibliotecas**:
-  - [SDL2](https://www.libsdl.org/download-2.0.php): Biblioteca para desenvolvimento de aplicações multimídia.
+  - [SDL2](https://github.com/libsdl-org/SDL/releases/tag/release-2.30.10) Biblioteca para desenvolvimento de aplicações multimídia.
   - [SDL2_ttf](https://www.libsdl.org/projects/SDL_ttf/): Extensão da SDL2 para renderização de fontes TrueType.
 - **Threads e Semáforos**: Implementados utilizando a biblioteca pthread e mecanismos de sincronização para gerenciar a concorrência.
 
@@ -201,16 +201,6 @@ Este projeto utiliza **threads** e **semaforos** para gerenciar a concorrência 
   - **Arquivo**: `semaforo.cpp` e `semaforo.h`
   - A classe `Semaforo` implementa os métodos `esperar` e `notificar` para controlar a disponibilidade das pistas.
   - As threads dos aviões utilizam esses métodos para adquirir e liberar pistas de forma sincronizada.
-
-## 🤝 Contribuição
-
-Contribuições são bem-vindas! Para contribuir com o projeto, siga os passos abaixo:
-
-1. **Fork** este repositório.
-2. **Crie** uma branch para sua feature (`git checkout -b feature/nova-feature`).
-3. **Commit** suas alterações (`git commit -m 'Adiciona nova feature'`).
-4. **Push** para a branch (`git push origin feature/nova-feature`).
-5. **Abra** um Pull Request.
 
 ## 📫 Contato
 
