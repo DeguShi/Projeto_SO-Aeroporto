@@ -1,6 +1,6 @@
 # Simulação de Aeroporto
 
-[![Demonstração do Programa](https://img.youtube.com/vi/WGdEENzyzUM/maxresdefault.jpg)](https://youtu.be/WGdEENzyzUM)
+[![Demonstração do Programa](thumb.jpg)](https://youtu.be/WGdEENzyzUM)
 
 ## 📖 Descrição
 
