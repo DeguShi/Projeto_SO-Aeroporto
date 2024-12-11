@@ -1,0 +1,20 @@
+/opt/homebrew/bin/g++-14 -std=c++17 main.cpp \
+-I./include -I/Library/Frameworks/SDL2.framework/Headers -I/Library/Frameworks/SDL2_ttf.framework/Headers \
+-F/Library/Frameworks \
+-framework SDL2 -framework SDL2_ttf -o main
+
+/opt/homebrew/bin/g++-14 -std=c++17 config.cpp \
+-I./include -I/Library/Frameworks/SDL2.framework/Headers -I/Library/Frameworks/SDL2_ttf.framework/Headers \
+-F/Library/Frameworks \
+-framework SDL2 -framework SDL2_ttf -o config
+
+/opt/homebrew/bin/g++-14 -std=c++17 main-backup.cpp \
+-I./include -I/Library/Frameworks/SDL2.framework/Headers -I/Library/Frameworks/SDL2_ttf.framework/Headers \
+-F/Library/Frameworks \
+-framework SDL2 -framework SDL2_ttf -o exec
+
+
+g++-14 -std=c++17 main.cpp aviao.cpp semaforo.cpp utils.cpp\
+    -I./include -I/Library/Frameworks/SDL2.framework/Headers -I/Library/Frameworks/SDL2_ttf.framework/Headers \
+    -F/Library/Frameworks \
+    -framework SDL2 -framework SDL2_ttf -o main
