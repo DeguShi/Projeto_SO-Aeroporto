@@ -1,4 +1,7 @@
-# Simulação de Aeroporto
+### **Simulação de Aeroporto**
+
+🎥 [**Assista à demonstração do programa**](https://youtu.be/WGdEENzyzUM)  
+Clique na imagem abaixo para conferir o vídeo completo no YouTube!  
 
 [![Demonstração do Programa](thumb.jpg)](https://youtu.be/WGdEENzyzUM)
 
@@ -19,12 +22,16 @@ Antes de compilar e executar o projeto, certifique-se de que seu sistema atende 
 
 - **Linguagem de Programação**: C++17
 - **Compilador**:
+  Apesar de indicar o uso do GCC/G++ versão 14 ou superior, acredito que funcione com versões mais antigas, todavia isso não foi testado.
   - **macOS**: GCC/G++ versão 14 ou superior
   - **Linux**: GCC/G++ versão 14 ou superior
   - **Windows**: MinGW ou outro compilador compatível com C++17
 - **Bibliotecas**:
-  - [SDL2](https://www.libsdl.org/download-2.0.php)
-  - [SDL2_ttf](https://www.libsdl.org/projects/SDL_ttf/)
+  Escolha a versão mais atualizada do SDL2 para o seu sistema (não SDL3).
+  - [SDL2](https://github.com/libsdl-org/SDL/releases/latest)
+  - [SDL2_ttf](https://www.libsdl.org/projects/SDL_ttf/release/)
+  - Nos `#includes`, para **macOS** não é necessário utilizar o `SDL2/` antes de `SDL.h`
+  ou `SDL_ttf.h`. Porém em outros sistemas operacionais isso será necessário, tome esse cuidado. 
 - **Outros**:
   - **Threads** e **Semáforos**: Implementados conforme os conceitos de Sistemas Operacionais.
 
@@ -32,26 +39,27 @@ Antes de compilar e executar o projeto, certifique-se de que seu sistema atende 
 
 ### 1. Instalar as Bibliotecas SDL2 e SDL2_ttf
 
-#### **macOS**
+#### **macOS com Apple silicon**
 
 A instalação manual das bibliotecas é necessária no macOS. Siga os passos abaixo:
 
 1. **Baixe as bibliotecas**:
-   - [Download SDL2](https://www.libsdl.org/download-2.0.php)
-   - [Download SDL2_ttf](https://www.libsdl.org/projects/SDL_ttf/)
+  - [SDL2](https://github.com/libsdl-org/SDL/releases/latest)
+  - [SDL2_ttf](https://www.libsdl.org/projects/SDL_ttf/release/)
 
-2. **Extraia os arquivos** baixados.
+2. **Localize os arquivos** baixados.
+  - Ao abrir o .dmg um folder nome_da_biblioteca.framework estará presente.
 
-3. **Copie as frameworks** para o diretório `/Library/Frameworks/`:
 
-   Abra o Terminal e execute os seguintes comandos (substitua `/caminho/para/` pelo caminho onde as frameworks foram extraídas):
+4. **Copie as frameworks** para o diretório `/Library/Frameworks/`:
 
-   ```bash
-   sudo cp -r /caminho/para/SDL2.framework /Library/Frameworks/
-   sudo cp -r /caminho/para/SDL2_ttf.framework /Library/Frameworks/
-   ```
-
-   **Nota**: Você pode precisar inserir sua senha de administrador para executar esses comandos.
+   - Navegue até seu `/Library/Frameworks/`
+   - Se utilizar o terminal, no diretório `/Library/` você pode utilizar o comando abaixo para abrir o local no finder:
+ 
+    ```zsh
+    open -R Frameworks/
+    ```
+   - Com essa pasta aberta no finder você pode arrastar o framework das bibliotecas do SDL2 direto para o seu `/Library/Frameworks/`.
 
 #### **Linux**
 
@@ -102,7 +110,7 @@ Com as dependências instaladas, você pode compilar o projeto usando os seguint
 
 ### **macOS**
 
-```bash
+```zsh
 g++-14 -std=c++17 main.cpp aviao.cpp semaforo.cpp utils.cpp \
     -I./include -I/Library/Frameworks/SDL2.framework/Headers -I/Library/Frameworks/SDL2_ttf.framework/Headers \
     -F/Library/Frameworks \
@@ -213,14 +221,12 @@ Se você tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contat
 ---
 
 ## 📝 Notas Finais
-
-- **Validação de Configurações**: O projeto garante que o **tempo entre aviões** não possa ser configurado para menos de **4 segundos**. Caso tente reduzir abaixo desse valor, o sistema impedirá a alteração e notificará o usuário.
-  
-- **Feedback Visual**: Botões desabilitados para reduzir o **tempo entre aviões** abaixo de 4 segundos são renderizados em cinza, indicando que não podem ser clicados.
   
 - **Performance**: O programa foi otimizado para rodar a aproximadamente **60 FPS**, proporcionando uma simulação suave e de fácil compreensão.
   
 - **Multiplataforma**: Embora a instalação das bibliotecas SDL2 e SDL2_ttf difira entre os sistemas operacionais, o projeto foi desenvolvido para ser **compatível com macOS, Linux e Windows**. Certifique-se de seguir as instruções de instalação específicas para o seu sistema.
+
+- **Bom senso**: O programa funciona muito bem para o que se propõe, porém é claro que haveerão limites para seu desempenho. Por isso, ao selecionar quantos aviões e os tempos de simulação, seja razoável.
 
 ---
 
