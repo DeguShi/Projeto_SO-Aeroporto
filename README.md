@@ -167,7 +167,7 @@ main.exe
 
 2. **Iniciar Simulação**:
    - Clique no botão "Play" para iniciar a simulação.
-   - Observe os aviões aterrissando, desembarcando passageiros, decolando e liberando pistas conforme as configurações definidas.
+   - Observe os aviões aterrissando, aguardando o desembarque de passageiros, decolando e liberando pistas conforme as configurações definidas.
 
 ## 🧰 Tecnologias Utilizadas
 
