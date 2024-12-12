@@ -1,4 +1,3 @@
-// semaforo.h
 #ifndef SEMAFORO_H
 #define SEMAFORO_H
 
