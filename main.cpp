@@ -63,7 +63,7 @@ void renderizarConfiguracao(SDL_Renderer* renderer, TTF_Font* font, const Config
     renderizarTexto(renderer, font, "Tempo de Pouso (s): " + to_string(config.tempo_pouso), 100, 150, preto);
     renderizarTexto(renderer, font, "Tempo de Desembarque (s): " + to_string(config.tempo_desembarque), 100, 200, preto);
     renderizarTexto(renderer, font, "Tempo de Decolagem (s): " + to_string(config.tempo_decolagem), 100, 250, preto);
-    renderizarTexto(renderer, font, "Tempo entre Aviões (s): " + to_string(config.tempo_entre_avioes), 100, 300, preto);
+    renderizarTexto(renderer, font, "Tempo entre Aviões (s): " + to_string(config.tempo_entre_avioes) + "                        (Recomendado: >=" + to_string(config.tempo_decolagem + config.tempo_pouso + config.tempo_desembarque) + "s)", 100, 300, preto);
     renderizarTexto(renderer, font, "Número de Pistas: " + to_string(config.num_pistas), 100, 350, preto);
     renderizarTexto(renderer, font, "Número de Aviões: " + to_string(config.num_avioes), 100, 400, preto);
 
