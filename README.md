@@ -214,14 +214,6 @@ Este projeto utiliza **threads** e **semaforos** para gerenciar a concorrência 
   - A classe `Semaforo` implementa os métodos `esperar` e `notificar` para controlar a disponibilidade das pistas.
   - As threads dos aviões utilizam esses métodos para adquirir e liberar pistas de forma sincronizada.
 
-## 📫 Contato
-
-Se você tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contato:
-
-- **Nome**: Felipe Azambuja
-- **Email**: felipe.azamba@usp.br
-- **GitHub**: [DeguShi](https://github.com/DeguShi)
-
 ---
 
 ## 📝 Notas Finais
