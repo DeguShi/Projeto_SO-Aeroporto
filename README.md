@@ -135,6 +135,8 @@ g++ -std=c++17 main.cpp aviao.cpp semaforo.cpp utils.cpp \
 ```
 
 **Nota**: Substitua `C:/Path/To/` pelo caminho real onde as bibliotecas SDL2 e SDL2_ttf estão instaladas no seu sistema.
+
+
 **OBS**: Normalmente eu faria um Makefile que já deixasse isso facilitado, porém no ambiente do **macOS**, ao utilizar um Makefile, estava ocorrendo conflítuo entre o diretório onde as bibliotecas de C++ estão
 instaladas e os frameworks da SDL2, por isso foi necessário utilizar comandos diretos como esses.
 
